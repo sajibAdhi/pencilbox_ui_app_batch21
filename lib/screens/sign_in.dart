@@ -15,7 +15,6 @@ class _SignInState extends State<SignIn> {
     var _customBlueColor = Color(0xff0ff143458);
 
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
         leading: BackButton(
@@ -45,16 +44,18 @@ class _SignInState extends State<SignIn> {
             SizedBox(
               height: _size.height / 20,
             ),
-            Container(
-              child: TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  floatingLabelBehavior: FloatingLabelBehavior.always,
-                  labelText: 'Username, Email or Mobile No',
-                  labelStyle: TextStyle(
-                    color: _customBlueColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+            ClipRect(
+              child: Container(
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                    labelText: 'Username, Email or Mobile No',
+                    labelStyle: TextStyle(
+                      color: _customBlueColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),
@@ -78,18 +79,69 @@ class _SignInState extends State<SignIn> {
             Container(
               child: Column(
                 children: [
-                  Text('Sign In with Social',
+                  Text(
+                    'Sign In with Social',
                     style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black87,
+                      fontSize: 20,
+                      color: Colors.black87,
                     ),
                   ),
                   Container(
-                    height: _size.height/10,
+                    height: _size.height / 10,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        // IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.icons),),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.google,
+                            color: Colors.red,
+                            size: 50,
+                          ),
+                        ),
+                        SizedBox(
+                          width: _size.width / 20,
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.facebook,
+                            color: Colors.blue,
+                            size: 50,
+                          ),
+                        ),
+                        SizedBox(
+                          width: _size.width / 20,
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(
+                            FontAwesomeIcons.linkedin,
+                            color: Colors.blue,
+                            size: 50,
+                          ),
+                        ),
                       ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: _size.height / 20,
+                  ),
+                  Text(
+                    'Don\'t have an Account?',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  SizedBox(
+                    height: _size.height / 40,
+                  ),
+                  Text(
+                    'Create Account',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.blue,
                     ),
                   ),
                 ],
@@ -97,6 +149,13 @@ class _SignInState extends State<SignIn> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: FaIcon(
+          FontAwesomeIcons.arrowRight,
+        ),
+        backgroundColor: Colors.red,
       ),
     );
   }
