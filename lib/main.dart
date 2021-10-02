@@ -1,4 +1,4 @@
-import '/screens/loading_screen.dart';
+import 'package:exam3/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

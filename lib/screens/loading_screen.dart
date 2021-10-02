@@ -10,8 +10,6 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +25,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
                 ),
                 child: Center(
                   child: GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) =>  SignIn())
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignIn(),
+                        )
                       );
                     },
                     child: Image.asset(

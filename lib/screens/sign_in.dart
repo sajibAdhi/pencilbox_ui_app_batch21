@@ -1,3 +1,4 @@
+import 'package:exam3/screens/search_job.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -151,7 +152,14 @@ class _SignInState extends State<SignIn> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SearchJob(),
+            ),
+          );
+        },
         child: FaIcon(
           FontAwesomeIcons.arrowRight,
         ),
