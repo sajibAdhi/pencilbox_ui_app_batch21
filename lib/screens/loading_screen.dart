@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:exam3/screens/sign_in.dart';
 import 'package:exam3/widgets/linear_progress_bar.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,16 @@ class LoadingScreen extends StatefulWidget {
 }
 
 class _LoadingScreenState extends State<LoadingScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(Duration(seconds: 5), (){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
