@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'sign_in.dart';
 
 class SearchJob extends StatelessWidget {
@@ -9,117 +8,107 @@ class SearchJob extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _height = MediaQuery.of(context).size.height;
-    var _width = MediaQuery.of(context).size.width;
+    var _size = MediaQuery.of(context).size;
 
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          actions: [
-            Padding(
-              padding: EdgeInsets.all(_width / 32),
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: FaIcon(
-                  FontAwesomeIcons.solidUserCircle,
-                  color: Colors.black,
-                  size: 30,
-                ),
-              ),
+        elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: FaIcon(
+              FontAwesomeIcons.solidUserCircle,
+              color: Colors.black,
             ),
-          ],
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(MediaQuery.of(context).size.width / 25),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(
-                'Search Job',
-                style: TextStyle(fontSize: 36, color: Color(0xFF3B185F)),
-              ),
-              SizedBox(
-                height: _height / 20,
-              ),
-              Column(
-                children: [
-                  CustomDropDown(
-                    hint: 'Select Company',
-                    item: ['Adovasoft', 'Data Soft', 'Divine IT'],
-                  ),
-                  CustomDropDown(
-                    hint: 'Select Address',
-                    item: ['Keraniganj', 'Shamoly', 'Banani'],
-                  ),
-                  CustomDropDown(
-                    hint: 'Select Designation',
-                    item: [
-                      'Webdeveloper',
-                      'Software Engineer',
-                      'Data Analysist'
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: _height / 20,
-              ),
-              Column(
-                children: [
-                  CustomButton(
-                    text: 'Search',
-                    icon: FontAwesomeIcons.search,
-                    buttonColor: Color(0xFF122F51),
-                    iconColor: Colors.white,
-                    textColor: Colors.white,
-                  ),
-                  CustomButton(
-                    text: 'View New Jobs',
-                    icon: FontAwesomeIcons.fire,
-                    buttonColor: Colors.white,
-                    iconColor: Colors.red,
-                    textColor: Colors.black87,
-                  ),
-                ],
-              ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Column(
-                  children: [
-                    Container(
-                      margin: EdgeInsets.only(top: _height / 20),
-                      child: Text(
-                        'For any help',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: _height / 60),
-                      child: Text(
-                        'Call at 16479',
-                        style: TextStyle(fontSize: 20, color: Colors.red),
-                      ),
-                    ),
-                  ],
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(MediaQuery.of(context).size.width / 25),
+          child:  
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(
+              'Search Job',
+              style: TextStyle(fontSize: 36, color: Color(0xFF3B185F)),
+            ),
+            SizedBox(
+              height: _height / 20,
+            ),
+            Column(
+              children: [
+                CustomDropDown(
+                  hint: 'Select Company',
+                  item: ['Adovasoft', 'Data Soft', 'Divine IT'],
                 ),
-              )
-            ]),
-          ),
+                CustomDropDown(
+                  hint: 'Select Address',
+                  item: ['Keraniganj', 'Shamoly', 'Banani'],
+                ),
+                CustomDropDown(
+                  hint: 'Select Designation',
+                  item: ['Webdeveloper', 'Software Engineer', 'Data Analysist'],
+                ),
+              ],
+            ),
+            SizedBox(
+              height: _height / 20,
+            ),
+            Column(
+              children: [
+                CustomButton(
+                  text: 'Search',
+                  icon: FontAwesomeIcons.search,
+                  buttonColor: Color(0xFF122F51),
+                  iconColor: Colors.white,
+                  textColor: Colors.white,
+                ),
+                CustomButton(
+                  text: 'View New Jobs',
+                  icon: FontAwesomeIcons.fire,
+                  buttonColor: Colors.white,
+                  iconColor: Colors.red,
+                  textColor: Colors.black87,
+                ),
+              ],
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: _height / 20),
+                    child: Text(
+                      'For any help',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: _height / 60),
+                    child: Text(
+                      'Call at 16479',
+                      style: TextStyle(fontSize: 20, color: Colors.red),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ]),
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          backgroundColor: Colors.red,
-          child: Icon(
-            Icons.arrow_forward,
-            size: 30,
-          ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.red,
+        child: Icon(
+          Icons.arrow_forward,
+          size: 30,
         ),
       ),
     );
