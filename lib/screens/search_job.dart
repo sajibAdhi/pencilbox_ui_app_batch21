@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'sign_in.dart';
+
 class SearchJob extends StatelessWidget {
   const SearchJob({Key? key}) : super(key: key);
 
@@ -219,7 +221,7 @@ class CustomButton extends StatelessWidget {
           splashColor: Colors.grey,
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SearchJob()));
+                context, MaterialPageRoute(builder: (context) => SignIn()));
           },
           backgroundColor: buttonColor,
           shape: RoundedRectangleBorder(
