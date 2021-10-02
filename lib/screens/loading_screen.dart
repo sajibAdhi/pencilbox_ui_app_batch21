@@ -38,7 +38,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                 },
                 child: Image.asset(
                   'assets/images/logo.png',
-                  width: MediaQuery.of(context).size.width / 2.5,
+                  width: MediaQuery.of(context).size.width / 2,
                 ),
               ),
             ),
@@ -57,8 +57,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                   Text(
                     'PencilBox',
                     style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
                     ),
                   ),
                   Text(
