@@ -8,7 +8,7 @@ class SearchJob extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _height = MediaQuery.of(context).size.height;
-    var _size = MediaQuery.of(context).size;
+    // var _width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -30,7 +30,7 @@ class SearchJob extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(MediaQuery.of(context).size.width / 25),
-          child:  
+          child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(
               'Search Job',

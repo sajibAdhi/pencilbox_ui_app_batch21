@@ -1,5 +1,5 @@
+import 'package:exam3/screens/sign_in_page.dart';
 import 'package:flutter/material.dart';
-import '/screens/registration_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegistrationPage(),
+      home: SignInPage(),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'skills.dart';
 
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({Key? key}) : super(key: key);
@@ -146,8 +145,8 @@ class RegistrationPage extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SkillsPage()));
+            // Navigator.push(
+            //     context, MaterialPageRoute(builder: (context) => SkillsPage()));
           },
           backgroundColor: Colors.red,
           child: Icon(
