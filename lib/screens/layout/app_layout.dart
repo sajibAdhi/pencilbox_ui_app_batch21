@@ -10,7 +10,6 @@ class AppLayout extends StatelessWidget {
     return Container(
       height: _size.height,
       width: _size.width,
-      decoration: BoxDecoration(color: Colors.yellow),
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

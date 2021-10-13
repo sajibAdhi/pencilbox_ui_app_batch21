@@ -1,8 +1,8 @@
-import 'package:exam3/models/gender.dart';
 import 'package:exam3/screens/layout/app_layout.dart';
 import 'package:exam3/widgets/custom_back_button.dart';
 import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
 import 'package:exam3/widgets/custom_title.dart';
+import 'package:exam3/widgets/gender_buttons.dart';
 import 'package:flutter/material.dart';
 
 class SelectGenderPage extends StatelessWidget {
@@ -10,8 +10,6 @@ class SelectGenderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Gender> _gender = Gender.getGenders();
-    final _size = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
           child: Stack(
@@ -21,7 +19,7 @@ class SelectGenderPage extends StatelessWidget {
               CustomBackButton(),
               CustomLinearProgressIndecator(progressValue: 0.3),
               CustomTitle(title: 'Select Gender'),
-              
+              GenderButtons(),
             ],
           ),
         ],
