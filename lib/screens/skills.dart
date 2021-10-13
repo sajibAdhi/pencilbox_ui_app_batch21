@@ -1,8 +1,5 @@
-// import 'package:exams/exam4/widgets/custom_skills_card.dart';
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/material.dart';
-// import 'package:percent_indicator/linear_percent_indicator.dart';
-// import 'account.dart';
 
 // class SkillsPage extends StatelessWidget {
 //   const SkillsPage({Key? key}) : super(key: key);

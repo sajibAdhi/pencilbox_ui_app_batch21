@@ -19,7 +19,7 @@ class SignInPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomBackButton(),
-                CustomTitle(),
+                CustomTitle(title: "Sign In"),
                 SizedBox(height: _size.height / 50),
                 Padding(
                   padding: EdgeInsets.only(

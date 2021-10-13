@@ -6,7 +6,9 @@ class CustomBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pop(context);
+      },
       child: new Container(
         padding: EdgeInsets.symmetric(vertical: 20),
         child: Icon(
