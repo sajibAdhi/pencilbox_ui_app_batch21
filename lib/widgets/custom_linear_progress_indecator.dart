@@ -15,7 +15,7 @@ class CustomLinearProgressIndecator extends StatelessWidget {
         width: _size.width / 1.5,
         child: LinearProgressIndicator(
           backgroundColor: Colors.grey[500],
-          color: Colors.green[900],
+          color: Colors.green[800],
           minHeight: 5,
           value: progressValue,
         ),
