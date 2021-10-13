@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomBackButton extends StatelessWidget {
   const CustomBackButton({Key? key}) : super(key: key);
@@ -11,9 +12,10 @@ class CustomBackButton extends StatelessWidget {
       },
       child: new Container(
         padding: EdgeInsets.symmetric(vertical: 20),
-        child: Icon(
-          Icons.arrow_back,
+        child: FaIcon(
+          FontAwesomeIcons.arrowLeft,
           size: 30,
+          color: Colors.black87,
         ),
       ),
     );
