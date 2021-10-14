@@ -5,29 +5,43 @@ class CustomFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _size = MediaQuery.of(context).size;
+    return Positioned(
+      bottom: 40,
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        alignment: Alignment.center,
+        // decoration: BoxDecoration(color: Colors.yellow),
+        child: Column(
+          children: [
+            TextWidget(text: 'For any help', color: Colors.black),
+            TextWidget(
+              text: 'Call at 16479',
+              color: Colors.red,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
 
-    return Container(
-      child: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.only(top: _size.height / 20),
-            child: Text(
-              'For any help',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.black,
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: _size.height / 60),
-            child: Text(
-              'Call at 16479',
-              style: TextStyle(fontSize: 20, color: Colors.red),
-            ),
-          ),
-        ],
+class TextWidget extends StatelessWidget {
+  final text;
+  final Color color;
+  const TextWidget({
+    Key? key,
+    this.text,
+    required this.color,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 18,
+        color: color,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

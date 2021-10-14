@@ -46,14 +46,14 @@ class _GenderButtonsState extends State<GenderButtons> {
                 children: [
                   FaIcon(
                     _gender[_index].icon,
-                    color: (_index == 1) ? Colors.white : Color(0xff2e64a4),
+                    color: (_index == 1) ? Colors.white : Colors.black,
                   ),
                   SizedBox(width: 10),
                   Text(
                     _gender[_index].label,
                     style: TextStyle(
                       fontSize: 16,
-                      color: (_index == 1) ? Colors.white : Color(0xff2e64a4),
+                      color: (_index == 1) ? Colors.white : Colors.black,
                     ),
                   ),
                 ],

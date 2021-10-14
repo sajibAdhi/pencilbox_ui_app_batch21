@@ -14,7 +14,7 @@ class CustomBackButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 20),
         child: FaIcon(
           FontAwesomeIcons.arrowLeft,
-          size: 30,
+          size: 26,
           color: Colors.black87,
         ),
       ),

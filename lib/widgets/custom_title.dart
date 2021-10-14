@@ -11,7 +11,7 @@ class CustomTitle extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          fontSize: 30,
+          fontSize: 20,
           fontWeight: FontWeight.bold,
         ),
       ),

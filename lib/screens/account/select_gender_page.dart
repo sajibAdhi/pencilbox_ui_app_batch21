@@ -1,5 +1,6 @@
 import 'package:exam3/screens/layout/app_layout.dart';
 import 'package:exam3/widgets/custom_back_button.dart';
+import 'package:exam3/widgets/custom_footer.dart';
 import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
 import 'package:exam3/widgets/custom_title.dart';
 import 'package:exam3/widgets/gender_buttons.dart';
@@ -17,11 +18,13 @@ class SelectGenderPage extends StatelessWidget {
           AppLayout(
             children: [
               CustomBackButton(),
-              CustomLinearProgressIndecator(progressValue: 0.3),
+              CustomLinearProgressIndecator(progressValue: 0.6),
               CustomTitle(title: 'Select Gender'),
               GenderButtons(),
             ],
           ),
+          CustomFooter(),
+          
         ],
       )),
     );
