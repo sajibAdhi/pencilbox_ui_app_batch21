@@ -14,7 +14,7 @@ class Gender {
     return [
       Gender(FontAwesomeIcons.male, Genders.male, "Male"),
       Gender(FontAwesomeIcons.female, Genders.female, "Female"),
-      Gender(FontAwesomeIcons.male, Genders.male, "Others"),
+      Gender(FontAwesomeIcons.transgender, Genders.others, "Others"),
     ];
   }
 }
