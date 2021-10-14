@@ -16,20 +16,29 @@ class CustomCenterIconTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _size = MediaQuery.of(context).size;
     return Container(
+      margin: EdgeInsets.symmetric(vertical: 20),
+      height: _size.height / 15,
+      width: _size.width,
+      alignment: Alignment.center,
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
         color: buttonColor,
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(
             icon,
             color: color,
           ),
+          SizedBox(width: 5),
           Text(
             buttonText,
             style: TextStyle(
               color: color,
+              fontSize: 20,
             ),
           ),
         ],
