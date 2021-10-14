@@ -1,11 +1,11 @@
-import 'package:exam3/screens/account/contact_page.dart';
-import 'package:exam3/screens/layout/app_layout.dart';
-import 'package:exam3/widgets/custom_floating_action_button.dart';
-import 'package:exam3/widgets/custom_back_button.dart';
-import 'package:exam3/widgets/custom_footer.dart';
-import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
-import 'package:exam3/widgets/custom_title.dart';
-import 'package:exam3/widgets/gender_buttons.dart';
+import 'package:pencilbox/screens/account/contact_page.dart';
+import 'package:pencilbox/screens/layout/app_layout.dart';
+import 'package:pencilbox/widgets/custom_floating_action_button.dart';
+import 'package:pencilbox/widgets/custom_back_button.dart';
+import 'package:pencilbox/widgets/custom_footer.dart';
+import 'package:pencilbox/widgets/custom_linear_progress_indecator.dart';
+import 'package:pencilbox/widgets/custom_title.dart';
+import 'package:pencilbox/widgets/gender_buttons.dart';
 import 'package:flutter/material.dart';
 
 class SelectGenderPage extends StatelessWidget {

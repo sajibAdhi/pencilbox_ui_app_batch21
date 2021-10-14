@@ -1,5 +1,5 @@
-import 'package:exam3/widgets/custom_back_button.dart';
-import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
+import 'package:pencilbox/widgets/custom_back_button.dart';
+import 'package:pencilbox/widgets/custom_linear_progress_indecator.dart';
 import 'package:flutter/material.dart';
 
 import 'layout/app_layout.dart';

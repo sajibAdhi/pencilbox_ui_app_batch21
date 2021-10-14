@@ -1,8 +1,8 @@
-import 'package:exam3/screens/layout/app_layout.dart';
-import 'package:exam3/widgets/custom_back_button.dart';
-import 'package:exam3/widgets/custom_center_icon_text_button.dart';
-import 'package:exam3/widgets/custom_header.dart';
-import 'package:exam3/widgets/custom_title.dart';
+import 'package:pencilbox/screens/layout/app_layout.dart';
+import 'package:pencilbox/widgets/custom_back_button.dart';
+import 'package:pencilbox/widgets/custom_center_icon_text_button.dart';
+import 'package:pencilbox/widgets/custom_header.dart';
+import 'package:pencilbox/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
 class AccountCompletePage extends StatelessWidget {

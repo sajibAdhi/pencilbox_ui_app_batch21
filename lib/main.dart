@@ -1,4 +1,4 @@
-import 'package:exam3/screens/account/select_gender_page.dart';
+import 'package:pencilbox/screens/account/select_gender_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,12 +1,12 @@
-import 'package:exam3/screens/account/account_complete_page.dart';
-import 'package:exam3/screens/layout/app_layout.dart';
-import 'package:exam3/widgets/custom_back_button.dart';
-import 'package:exam3/widgets/custom_floating_action_button.dart';
-import 'package:exam3/widgets/custom_footer.dart';
-import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
-import 'package:exam3/widgets/custom_password_text_field.dart';
-import 'package:exam3/widgets/custom_title.dart';
-import 'package:exam3/widgets/set_as_user_buttons.dart';
+import 'package:pencilbox/screens/account/account_complete_page.dart';
+import 'package:pencilbox/screens/layout/app_layout.dart';
+import 'package:pencilbox/widgets/custom_back_button.dart';
+import 'package:pencilbox/widgets/custom_floating_action_button.dart';
+import 'package:pencilbox/widgets/custom_footer.dart';
+import 'package:pencilbox/widgets/custom_linear_progress_indecator.dart';
+import 'package:pencilbox/widgets/custom_password_text_field.dart';
+import 'package:pencilbox/widgets/custom_title.dart';
+import 'package:pencilbox/widgets/set_as_user_buttons.dart';
 import 'package:flutter/material.dart';
 
 class SetPasswordPage extends StatelessWidget {

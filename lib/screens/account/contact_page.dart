@@ -1,12 +1,12 @@
-import 'package:exam3/screens/account/set_password_page.dart';
-import 'package:exam3/screens/layout/app_layout.dart';
-import 'package:exam3/widgets/CustomTextDivider.dart';
-import 'package:exam3/widgets/custom_back_button.dart';
-import 'package:exam3/widgets/custom_floating_action_button.dart';
-import 'package:exam3/widgets/custom_footer.dart';
-import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
-import 'package:exam3/widgets/custom_text_from_field.dart';
-import 'package:exam3/widgets/custom_title.dart';
+import 'package:pencilbox/screens/account/set_password_page.dart';
+import 'package:pencilbox/screens/layout/app_layout.dart';
+import 'package:pencilbox/widgets/CustomTextDivider.dart';
+import 'package:pencilbox/widgets/custom_back_button.dart';
+import 'package:pencilbox/widgets/custom_floating_action_button.dart';
+import 'package:pencilbox/widgets/custom_footer.dart';
+import 'package:pencilbox/widgets/custom_linear_progress_indecator.dart';
+import 'package:pencilbox/widgets/custom_text_from_field.dart';
+import 'package:pencilbox/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
 class ContactPage extends StatelessWidget {

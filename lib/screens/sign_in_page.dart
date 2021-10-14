@@ -1,5 +1,5 @@
-import 'package:exam3/widgets/custom_back_button.dart';
-import 'package:exam3/widgets/custom_title.dart';
+import 'package:pencilbox/widgets/custom_back_button.dart';
+import 'package:pencilbox/widgets/custom_title.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatelessWidget {
