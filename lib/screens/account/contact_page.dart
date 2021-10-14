@@ -1,4 +1,5 @@
 import 'package:exam3/screens/layout/app_layout.dart';
+import 'package:exam3/widgets/CustomTextDivider.dart';
 import 'package:exam3/widgets/custom_back_button.dart';
 import 'package:exam3/widgets/custom_floating_action_button.dart';
 import 'package:exam3/widgets/custom_footer.dart';
@@ -28,6 +29,7 @@ class ContactPage extends StatelessWidget {
                 initialValue: "Bangladesh (+880)",
               ),
               CustomTextFromField(labelText: 'Mobile Number'),
+              CustomTextDivider(text: 'OR'),
               CustomTextFromField(labelText: 'Email'),
             ],
           ),
