@@ -1,4 +1,6 @@
+import 'package:exam3/screens/account/contact_page.dart';
 import 'package:exam3/screens/layout/app_layout.dart';
+import 'package:exam3/widgets/custom_floating_action_button.dart';
 import 'package:exam3/widgets/custom_back_button.dart';
 import 'package:exam3/widgets/custom_footer.dart';
 import 'package:exam3/widgets/custom_linear_progress_indecator.dart';
@@ -24,7 +26,9 @@ class SelectGenderPage extends StatelessWidget {
             ],
           ),
           CustomFooter(),
-          
+          CustomFloatingActionButton(
+            widget: ContactPage(),
+          ),
         ],
       )),
     );

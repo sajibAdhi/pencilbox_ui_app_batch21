@@ -30,8 +30,9 @@ class _GenderButtonsState extends State<GenderButtons> {
         itemBuilder: (context, _index) {
           return GestureDetector(
             onTap: () {
-              _selected = _index;
-              print(_selected);
+              setState(() {
+                _selected = _index;
+              });
             },
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 10),
@@ -40,20 +41,21 @@ class _GenderButtonsState extends State<GenderButtons> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(),
-                color: (_index == 1) ? Color(0xff2e64a4) : Colors.white,
+                color: (_index == _selected) ? Color(0xff2e64a4) : Colors.white,
               ),
               child: Row(
                 children: [
                   FaIcon(
                     _gender[_index].icon,
-                    color: (_index == 1) ? Colors.white : Colors.black,
+                    color: (_index == _selected) ? Colors.white : Colors.black,
                   ),
                   SizedBox(width: 10),
                   Text(
                     _gender[_index].label,
                     style: TextStyle(
                       fontSize: 16,
-                      color: (_index == 1) ? Colors.white : Colors.black,
+                      color:
+                          (_index == _selected) ? Colors.white : Colors.black,
                     ),
                   ),
                 ],
