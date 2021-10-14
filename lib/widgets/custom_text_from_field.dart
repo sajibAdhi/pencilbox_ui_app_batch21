@@ -13,8 +13,11 @@ class CustomTextFromField extends StatelessWidget {
       borderSide: const BorderSide(color: Colors.grey, width: 1.0),
       borderRadius: BorderRadius.circular(10.0),
     );
-    
+
     return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 10,
+      ),
       child: TextFormField(
         initialValue: initialValue,
         decoration: InputDecoration(
