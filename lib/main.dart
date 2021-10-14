@@ -1,4 +1,4 @@
-import 'package:exam3/screens/account/set_password_page.dart';
+import 'package:exam3/screens/account/account_complete_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SetPasswordPage(),
+      home: AccountCompletePage(),
     );
   }
 }

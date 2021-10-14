@@ -1,3 +1,4 @@
+import 'package:exam3/screens/account/account_complete_page.dart';
 import 'package:exam3/screens/layout/app_layout.dart';
 import 'package:exam3/widgets/custom_back_button.dart';
 import 'package:exam3/widgets/custom_floating_action_button.dart';
@@ -43,7 +44,7 @@ class SetPasswordPage extends StatelessWidget {
             ],
           ),
           CustomFooter(),
-          CustomFloatingActionButton(),
+          CustomFloatingActionButton(widget: AccountCompletePage()),
         ],
       )),
     );
