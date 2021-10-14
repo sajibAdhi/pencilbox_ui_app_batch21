@@ -1,15 +1,15 @@
-import 'package:exam3/models/gender_model.dart';
+import 'package:exam3/models/user_as_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class GenderButtons extends StatefulWidget {
-  const GenderButtons({Key? key}) : super(key: key);
+class SetAsUserButtons extends StatefulWidget {
+  const SetAsUserButtons({Key? key}) : super(key: key);
 
   @override
-  _GenderButtonsState createState() => _GenderButtonsState();
+  _SetAsUserButtonsState createState() => _SetAsUserButtonsState();
 }
 
-class _GenderButtonsState extends State<GenderButtons> {
+class _SetAsUserButtonsState extends State<SetAsUserButtons> {
   var _selected;
 
   @override
@@ -20,11 +20,11 @@ class _GenderButtonsState extends State<GenderButtons> {
 
   @override
   Widget build(BuildContext context) {
-    final List<GenderModel> _gender = GenderModel.getGenders();
+    final List<UserAsModel> _gender = UserAsModel.getUserAs();
     final _size = MediaQuery.of(context).size;
 
     return Container(
-      height: 300,
+      height: 150,
       child: ListView.builder(
         itemCount: _gender.length,
         itemBuilder: (context, _index) {
@@ -37,9 +37,9 @@ class _GenderButtonsState extends State<GenderButtons> {
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 10),
-              height: _size.height / 15,
+              height: _size.height / 20,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(5),
                 border: Border.all(),
                 color: (_index == _selected) ? Color(0xff2e64a4) : Colors.white,
               ),
@@ -47,6 +47,7 @@ class _GenderButtonsState extends State<GenderButtons> {
                 children: [
                   FaIcon(
                     _gender[_index].icon,
+                    size: 20,
                     color: (_index == _selected) ? Colors.white : Colors.black,
                   ),
                   SizedBox(width: 10),
