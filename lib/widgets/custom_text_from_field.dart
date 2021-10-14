@@ -9,7 +9,11 @@ class CustomTextFromField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final _size = MediaQuery.of(context).size;
+    var outlineInputBorder = OutlineInputBorder(
+      borderSide: const BorderSide(color: Colors.grey, width: 1.0),
+      borderRadius: BorderRadius.circular(10.0),
+    );
+    
     return Container(
       child: TextFormField(
         initialValue: initialValue,
@@ -21,14 +25,8 @@ class CustomTextFromField extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           floatingLabelBehavior: FloatingLabelBehavior.always,
-          enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.grey, width: 1.0),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.grey, width: 1.0),
-            borderRadius: BorderRadius.circular(10.0),
-          ),
+          enabledBorder: outlineInputBorder,
+          focusedBorder: outlineInputBorder,
         ),
       ),
     );
