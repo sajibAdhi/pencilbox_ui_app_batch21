@@ -1,5 +1,5 @@
-import 'package:pencilbox/screens/account/select_gender_page.dart';
 import 'package:flutter/material.dart';
+import 'package:pencilbox/screens/loading_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SelectGenderPage(),
+      home: LoadingPage(),
     );
   }
 }

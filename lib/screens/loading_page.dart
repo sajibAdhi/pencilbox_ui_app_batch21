@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:pencilbox/screens/layout/app_layout.dart';
 
-import 'search_job.dart';
 
-class LoadingScreen extends StatefulWidget {
-  const LoadingScreen({Key? key}) : super(key: key);
+class LoadingPage extends StatefulWidget {
+  const LoadingPage({Key? key}) : super(key: key);
 
   @override
-  _LoadingScreenState createState() => _LoadingScreenState();
+  _LoadingPageState createState() => _LoadingPageState();
 }
 
-class _LoadingScreenState extends State<LoadingScreen> {
+class _LoadingPageState extends State<LoadingPage> {
   // @override
   // void initState() {
   //   super.initState();
-  //   Timer(Duration(seconds: 5), (){
-  //     Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
+  //   Timer(Duration(seconds: 5), () {
+  //     Navigator.push(
+  //         context, MaterialPageRoute(builder: (context) => SignIn()));
   //   });
   // }
 
@@ -25,23 +26,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Column(
+        child: AppLayout(
           children: [
-            Container(
-              padding: EdgeInsets.only(top: _size.height / 3),
-              height: _size.height / 2,
-              alignment: Alignment.center,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SearchJob()));
-                },
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: MediaQuery.of(context).size.width / 2,
-                ),
-              ),
-            ),
+            ImageIconWidget(size: _size),
             Container(
               margin: EdgeInsets.only(top: 80),
               width: _size.width / 3,
@@ -79,6 +66,37 @@ class _LoadingScreenState extends State<LoadingScreen> {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class ImageIconWidget extends StatelessWidget {
+  const ImageIconWidget({
+    Key? key,
+    required Size size,
+  }) : _size = size, super(key: key);
+
+  final Size _size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
+      alignment: Alignment.bottomCenter,
+      height: _size.height / 2,
+      width: _size.width,
+      child: GestureDetector(
+        onTap: () {
+          // Navigator.push(context,
+          //     MaterialPageRoute(builder: (context) => SearchJob()));
+        },
+        child: Image.asset(
+          'assets/images/logo.png',
+          fit: BoxFit.cover,
+          width: _size.width /3,
+
         ),
       ),
     );
