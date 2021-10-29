@@ -1,6 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:pencilbox/screens/layout/app_layout.dart';
-
+import 'package:pencilbox/widgets/custom_linear_progress_indecator.dart';
 
 class LoadingPage extends StatefulWidget {
   const LoadingPage({Key? key}) : super(key: key);
@@ -10,14 +12,18 @@ class LoadingPage extends StatefulWidget {
 }
 
 class _LoadingPageState extends State<LoadingPage> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   Timer(Duration(seconds: 5), () {
-  //     Navigator.push(
-  //         context, MaterialPageRoute(builder: (context) => SignIn()));
-  //   });
-  // }
+
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Timer(Duration(seconds: 5), () {
+    //   Navigator.push(
+    //       context, MaterialPageRoute(builder: (context) => SignIn()));
+    // });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +36,10 @@ class _LoadingPageState extends State<LoadingPage> {
           children: [
             ImageIconWidget(size: _size),
             Container(
+              alignment: Alignment.center,
+              padding: EdgeInsets.symmetric(horizontal: _size.width * 0.25),
               margin: EdgeInsets.only(top: 80),
-              width: _size.width / 3,
-              child: LinearProgressIndicator(
-                color: Colors.black87,
-                backgroundColor: Colors.grey,
-              ),
+              child: CustomLinearProgressIndecator(),
             ),
             Expanded(
               child: Column(
@@ -76,27 +80,26 @@ class ImageIconWidget extends StatelessWidget {
   const ImageIconWidget({
     Key? key,
     required Size size,
-  }) : _size = size, super(key: key);
+  })  : _size = size,
+        super(key: key);
 
   final Size _size;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       alignment: Alignment.bottomCenter,
       height: _size.height / 2,
       width: _size.width,
       child: GestureDetector(
         onTap: () {
-          // Navigator.push(context,
-          //     MaterialPageRoute(builder: (context) => SearchJob()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => SearchJob()));
         },
         child: Image.asset(
           'assets/images/logo.png',
           fit: BoxFit.cover,
-          width: _size.width /3,
-
+          width: _size.width / 3,
         ),
       ),
     );

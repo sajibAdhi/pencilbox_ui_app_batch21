@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomLinearProgressIndecator extends StatelessWidget {
-  final double progressValue;
-  const CustomLinearProgressIndecator({Key? key, required this.progressValue})
+  final double? progressValue;
+  const CustomLinearProgressIndecator({Key? key, this.progressValue})
       : super(key: key);
 
   @override
