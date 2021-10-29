@@ -1,7 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:pencilbox/screens/layout/app_layout.dart';
+import 'package:pencilbox/screens/search_job.dart';
 import 'package:pencilbox/widgets/custom_linear_progress_indecator.dart';
 
 class LoadingPage extends StatefulWidget {
