@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pencilbox/screens/loading_page.dart';
+import 'package:pencilbox/screens/profile/personal_details_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoadingPage(),
+      home: PersonalDetailsPage(),
     );
   }
 }
