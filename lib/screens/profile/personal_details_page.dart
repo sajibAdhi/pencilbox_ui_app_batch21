@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pencilbox/screens/profile/personal_details_edit_page.dart';
 import 'package:pencilbox/widgets/custom_footer.dart';
 
 class PersonalDetailsPage extends StatelessWidget {
@@ -18,7 +19,17 @@ class PersonalDetailsPage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(FontAwesomeIcons.edit),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PersonalDetailsEditPage(),
+                  ),
+                );
+              },
+              icon: Icon(FontAwesomeIcons.edit),
+            ),
           )
         ],
       ),
